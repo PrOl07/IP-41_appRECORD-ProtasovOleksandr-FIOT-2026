@@ -554,3 +554,250 @@ footer {
     }
 
 }
+
+
+/* =========================================================
+   ЛАБОРАТОРНА РОБОТА №2
+   ========================================================= */
+
+/* Приклад селектора тегу */
+.lab2-tag-demo h3 {
+    color: #654321;
+    font-family: Georgia, serif;
+    border-bottom: 2px solid #c6a15b;
+    padding-bottom: 6px;
+}
+
+/* Приклад селектора класу */
+.character-card {
+    background-color: #f8f0df;
+    color: #3d3023;
+    border: 1px solid #b89b65;
+    border-radius: 12px;
+    padding: 18px;
+    margin: 12px 0;
+    box-shadow: 0 3px 8px #00000018;
+}
+
+.character-card h3 {
+    margin-top: 0;
+}
+
+/* Приклад селектора ідентифікатора */
+#main-tips {
+    background-color: #e7edf8;
+    color: #203654;
+    border-left: 5px solid #426a9b;
+    padding: 18px;
+    margin: 15px 0;
+    border-radius: 6px;
+}
+
+#main-tips h3 {
+    margin-top: 0;
+}
+
+/* Інші селектори */
+.selector-demo {
+    padding: 15px;
+    background-color: #faf8f2;
+    border: 1px solid #d4c7aa;
+    border-radius: 8px;
+}
+
+.selector-demo .section-heading {
+    margin-top: 0;
+}
+
+.selector-demo .section-heading + p {
+    font-style: italic;
+    color: #555;
+}
+
+.selector-demo .spell-list > li {
+    margin-bottom: 6px;
+    color: #654321;
+}
+
+.selector-demo input[type="number"] {
+    width: 100px;
+    padding: 8px;
+    border: 2px solid #9a7b42;
+    border-radius: 5px;
+}
+
+/* Шрифти та текст */
+.styled-text {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.7;
+    text-align: left;
+    color: #46351f;
+    text-shadow: 1px 1px 1px #00000015;
+    padding: 12px 0;
+}
+
+/* Фон, контури та відступи */
+.notice-box {
+    background: linear-gradient(135deg, #fff8e8, #ead8b5);
+    border: 1px solid #b89b65;
+    outline: 2px solid #eee1c7;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 12px 4px;
+}
+
+/* Таблиця */
+.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+}
+
+.styled-table th,
+.styled-table td {
+    border: 1px solid #a99a7c;
+    padding: 10px;
+    text-align: left;
+}
+
+.styled-table th {
+    background-color: #e8dcc2;
+}
+
+.styled-table tbody tr:nth-child(even) {
+    background-color: #faf6ed;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #f5eddd;
+}
+
+/* Вкладені списки */
+.nested-list {
+    list-style-type: square;
+    padding-left: 25px;
+}
+
+.nested-list ul {
+    list-style-type: circle;
+    margin-top: 5px;
+}
+
+/* Просунутий CSS: Flexbox, псевдоклас, переходи */
+.feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin: 20px 0;
+}
+
+.feature-item {
+    flex: 1 1 150px;
+    padding: 14px;
+    background-color: #f3ead8;
+    border: 1px solid #d0bd98;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.feature-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px #00000020;
+}
+
+/* Резюме */
+.resume-card {
+    max-width: 650px;
+    margin: 20px auto;
+    overflow: hidden;
+    border: 1px solid #c8c8c8;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 4px 12px #00000012;
+}
+
+.resume-header {
+    padding: 25px;
+    background-color: #263b50;
+    color: white;
+}
+
+.resume-header h3 {
+    margin: 0 0 6px;
+    font-size: 26px;
+}
+
+.resume-header p {
+    margin: 0;
+}
+
+.resume-body {
+    padding: 20px 25px;
+}
+
+.resume-body h4 {
+    color: #263b50;
+    border-bottom: 1px solid #c8d0d8;
+    padding-bottom: 5px;
+}
+
+.resume-body li {
+    margin-bottom: 5px;
+}
+
+/* Місця для скриншотів */
+.screenshot-placeholder {
+    padding: 25px 15px;
+    margin: 20px 0;
+    border: 2px dashed #aaa;
+    border-radius: 8px;
+    background-color: #fafafa;
+    color: #666;
+    text-align: center;
+    font-size: 14px;
+}
+
+/* Адаптивність прикладів ЛР №2 */
+@media (max-width: 500px) {
+    .styled-table th,
+    .styled-table td {
+        padding: 6px;
+        font-size: 13px;
+        overflow-wrap: anywhere;
+    }
+
+    .resume-header h3 {
+        font-size: 22px;
+    }
+
+    .resume-body {
+        padding: 15px;
+    }
+}
+
+/* Повідомлення після перевірки форми */
+.form-message {
+    margin-top: 15px;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.form-message-success {
+    color: #166534;
+    background-color: #dcfce7;
+    border: 1px solid #86efac;
+}
+
+.form-message-error {
+    color: #991b1b;
+    background-color: #fee2e2;
+    border: 1px solid #fca5a5;
+}
+
+/* Щоб при прокручуванні заголовок розділу не прилипав до краю */
+.report-section {
+    scroll-margin-top: 20px;
+}
