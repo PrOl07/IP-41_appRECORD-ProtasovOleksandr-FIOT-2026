@@ -221,7 +221,7 @@
                         <h3>Жива сторінка звітного HTML-документа</h3>
 
                         <p>
-                            <a href="https://prol07.github.io/IP-41_appRECORD-ProtasovOleksandr-FIOT-2026/" target="_blank">
+                            <a href="#" target="_blank">
                                 Жива сторінка appRECORD
                             </a>
                         </p>
@@ -239,7 +239,7 @@
                         <h3>Жива сторінка самостійних робіт</h3>
 
                         <p>
-                            <a href="https://prol07.github.io/IP-41_INDEPENDENT-ProtasovOleksandr-FIOT-2026/" target="_blank">
+                            <a href="#" target="_blank">
                                 Жива сторінка самостійних робіт
                             </a>
                         </p>
@@ -542,7 +542,7 @@
                         <h3>Результат виконання</h3>
 
                         <img
-                            src="table.png"
+                            src="images/lab1/table.png"
                             alt="Скріншот HTML-таблиці"
                             class="report-image"
                         >
@@ -608,7 +608,7 @@
                         <h3>Результат виконання</h3>
 
                         <img
-                            src="example.png"
+                            src="images/lab1/example.png"
                             alt="Скріншот HTML-зображення"
                             class="report-image"
                         >
@@ -805,6 +805,449 @@
              ================================================= -->
 
         <section id="lab2" class="lab-content">
+
+    <div class="lab-title">
+        <h2>Лабораторна робота №2</h2>
+        <p>
+            Каскадні таблиці стилів. Селектори тегу, класу,
+            ідентифікатора. Стильове оформлення текстових
+            елементів в HTML-документах.
+        </p>
+    </div>
+
+    <div class="lab-layout">
+
+        <!-- ЛІВА НАВІГАЦІЯ -->
+
+        <aside class="side-navigation">
+            <a href="#lab2-topic">Тема та мета</a>
+            <a href="#lab2-tag">Селектори тегу</a>
+            <a href="#lab2-class">Селектори класів</a>
+            <a href="#lab2-id">Селектори ідентифікаторів</a>
+            <a href="#lab2-other">Інші селектори</a>
+            <a href="#lab2-css">CSS: оформлення елементів</a>
+            <a href="#lab2-resume">Резюме</a>
+            <a href="#lab2-conclusion">Висновки</a>
+        </aside>
+
+        <div class="lab-main-content">
+
+            <!-- ТЕМА ТА МЕТА -->
+
+            <section id="lab2-topic" class="report-section">
+                <h2>Тема та мета лабораторної роботи №2</h2>
+
+                <h3>Тема</h3>
+                <p>
+                    Каскадні таблиці стилів. Селектори тегу,
+                    класу, ідентифікатора. Стильове оформлення
+                    текстових елементів в HTML-документах.
+                </p>
+
+                <h3>Мета</h3>
+                <p>
+                    Придбати практичні навички роботи з CSS-селекторами,
+                    ідентифікаторами, списками, властивостями кольору
+                    та фону, зовнішніми й внутрішніми відступами,
+                    плаваючими елементами та оформленням тексту.
+                </p>
+
+                <h3>Теоретичні відомості</h3>
+                <p>
+                    CSS (Cascading Style Sheets) — мова таблиць стилів,
+                    яка використовується для оформлення HTML-документів.
+                    За допомогою CSS можна змінювати кольори, шрифти,
+                    відступи, межі, розташування елементів та їхню
+                    поведінку під час взаємодії з користувачем.
+                </p>
+                <p>
+                    У цій роботі приклади реалізовано на тематиці
+                    WEB-застосунку для майстра настільної рольової
+                    гри Dungeons &amp; Dragons.
+                </p>
+            </section>
+
+            <!-- СЕЛЕКТОРИ ТЕГУ -->
+
+            <section id="lab2-tag" class="report-section">
+                <h2>Селектори тегу</h2>
+
+                <p>
+                    Селектор тегу застосовується до всіх HTML-елементів
+                    відповідного типу. Наприклад, правило для
+                    <code>h3</code> оформлює заголовки третього рівня.
+                </p>
+
+                <h3>HTML-код</h3>
+                <pre><code>&lt;h3&gt;Поради майстру гри&lt;/h3&gt;
+&lt;p&gt;Перевірте ініціативу перед початком бою.&lt;/p&gt;</code></pre>
+
+                <h3>CSS-код</h3>
+                <pre><code>h3 {
+    color: #654321;
+    font-family: Georgia, serif;
+    border-bottom: 2px solid #c6a15b;
+    padding-bottom: 6px;
+}</code></pre>
+
+                <h3>Результат виконання</h3>
+                <div class="lab2-tag-demo">
+                    <h3>Поради майстру гри</h3>
+                    <p>Перевірте ініціативу перед початком бою.</p>
+                </div>
+
+            </section>
+
+            <!-- СЕЛЕКТОРИ КЛАСІВ -->
+
+            <section id="lab2-class" class="report-section">
+                <h2>Селектори класів</h2>
+
+                <p>
+                    Селектор класу починається з крапки та застосовується
+                    до всіх елементів, яким призначено відповідний атрибут
+                    <code>class</code>. Один клас можна використовувати
+                    для кількох елементів.
+                </p>
+
+                <h3>HTML-код</h3>
+                <pre><code>&lt;div class="character-card"&gt;
+    &lt;h3&gt;Персонаж гравця&lt;/h3&gt;
+    &lt;p&gt;Клас: Паладин&lt;/p&gt;
+    &lt;p&gt;Рівень: 3&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+                <h3>CSS-код</h3>
+                <pre><code>.character-card {
+    background-color: #f8f0df;
+    color: #3d3023;
+    border: 1px solid #b89b65;
+    border-radius: 12px;
+    padding: 18px;
+    margin: 12px 0;
+    box-shadow: 0 3px 8px #00000018;
+}
+
+.character-card h3 {
+    margin-top: 0;
+}</code></pre>
+
+                <h3>Результат виконання</h3>
+                <div class="character-card">
+                    <h3>Персонаж гравця</h3>
+                    <p>Клас: Паладин</p>
+                    <p>Рівень: 3</p>
+                </div>
+
+            </section>
+
+            <!-- СЕЛЕКТОРИ ІДЕНТИФІКАТОРІВ -->
+
+            <section id="lab2-id" class="report-section">
+                <h2>Селектори ідентифікаторів</h2>
+
+                <p>
+                    Селектор ідентифікатора починається зі знака
+                    <code>#</code>. Він застосовується до елемента
+                    з відповідним унікальним значенням атрибута
+                    <code>id</code>.
+                </p>
+
+                <h3>HTML-код</h3>
+                <pre><code>&lt;div id="main-tips"&gt;
+    &lt;h3&gt;Нагадування майстру&lt;/h3&gt;
+    &lt;p&gt;Перед боєм визначте порядок ініціативи.&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+
+                <h3>CSS-код</h3>
+                <pre><code>#main-tips {
+    background-color: #e7edf8;
+    color: #203654;
+    border-left: 5px solid #426a9b;
+    padding: 18px;
+    margin: 15px 0;
+    border-radius: 6px;
+}
+
+#main-tips h3 {
+    margin-top: 0;
+}</code></pre>
+
+                <h3>Результат виконання</h3>
+                <div id="main-tips">
+                    <h3>Нагадування майстру</h3>
+                    <p>Перед боєм визначте порядок ініціативи.</p>
+                </div>
+
+            </section>
+
+            <!-- ІНШІ СЕЛЕКТОРИ -->
+
+            <section id="lab2-other" class="report-section">
+                <h2>Інші селектори</h2>
+
+                <h3>1. Дочірній селектор</h3>
+                <p>
+                    Символ <code>&gt;</code> вибирає елементи, які є
+                    безпосередніми дочірніми елементами іншого елемента.
+                </p>
+                <pre><code>.spell-list &gt; li {
+    color: #654321;
+    margin-bottom: 6px;
+}</code></pre>
+
+                <h3>2. Сусідній селектор</h3>
+                <p>
+                    Символ <code>+</code> вибирає елемент, який
+                    безпосередньо розташований після вказаного сусіднього
+                    елемента на тому самому рівні вкладеності.
+                </p>
+                <pre><code>.section-heading + p {
+    font-style: italic;
+    color: #555;
+}</code></pre>
+
+                <h3>3. Селектор атрибута</h3>
+                <p>
+                    Селектор атрибута дає змогу вибрати елементи
+                    за значенням їхнього атрибута.
+                </p>
+                <pre><code>input[type="number"] {
+    border: 2px solid #9a7b42;
+    padding: 8px;
+    border-radius: 5px;
+}</code></pre>
+
+                <h3>4. Універсальний селектор</h3>
+                <p>
+                    Символ <code>*</code> вибирає всі елементи документа
+                    або всі елементи в межах заданого контейнера.
+                </p>
+                <pre><code>* {
+    box-sizing: border-box;
+}</code></pre>
+
+                <h3>Результат виконання</h3>
+
+                <div class="selector-demo">
+                    <h4 class="section-heading">Магічні здібності</h4>
+                    <p>Відновлення магічних комірок відбувається під час відпочинку.</p>
+
+                    <ul class="spell-list">
+                        <li>Вогняна куля</li>
+                        <li>Щит</li>
+                        <li>Магічна стріла</li>
+                    </ul>
+
+                    <label for="spell-level">Рівень заклинання:</label>
+                    <input id="spell-level" type="number" min="1" max="9" value="3">
+                </div>
+
+            </section>
+
+            <!-- CSS: ОФОРМЛЕННЯ ЕЛЕМЕНТІВ -->
+
+            <section id="lab2-css" class="report-section">
+                <h2>CSS: Шрифти, текст, таблиці, фон, контур, списки, CSS просунутий</h2>
+
+                <h3>1. Шрифти, текст і колір</h3>
+                <p>
+                    Властивості шрифту визначають гарнітуру, розмір
+                    і насиченість тексту. Властивості тексту керують
+                    вирівнюванням, міжрядковим інтервалом і декоруванням.
+                </p>
+                <pre><code>.styled-text {
+    font-family: Georgia, serif;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.7;
+    text-align: left;
+    text-decoration: none;
+    color: #46351f;
+    text-shadow: 1px 1px 1px #00000015;
+}</code></pre>
+
+                <div class="styled-text">
+                    Майстер гри керує пригодою, а гравці створюють її історію.
+                </div>
+
+                <h3>2. Фон, контури та відступи</h3>
+                <p>
+                    Властивості фону задають колір або зображення.
+                    Межі та контури допомагають візуально виділяти
+                    важливі елементи. Внутрішній відступ задається
+                    через <code>padding</code>, зовнішній — через
+                    <code>margin</code>.
+                </p>
+                <pre><code>.notice-box {
+    background: linear-gradient(135deg, #fff8e8, #ead8b5);
+    border: 1px solid #b89b65;
+    outline: 2px solid #eee1c7;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 12px 4px;
+}</code></pre>
+
+                <div class="notice-box">
+                    <strong>Порада:</strong>
+                    підготуйте статистику монстрів до початку бойової сцени.
+                </div>
+
+                <h3>3. Оформлення таблиць</h3>
+                <p>
+                    Для таблиць можна використовувати об'єднання меж,
+                    відступи комірок, фон заголовків і зміну кольору
+                    рядків під час наведення курсора.
+                </p>
+                <pre><code>.styled-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.styled-table th,
+.styled-table td {
+    border: 1px solid #a99a7c;
+    padding: 10px;
+    text-align: left;
+}
+
+.styled-table th {
+    background-color: #e8dcc2;
+}
+
+.styled-table tbody tr:hover {
+    background-color: #f5eddd;
+}</code></pre>
+
+                <table class="styled-table">
+                    <thead>
+                        <tr>
+                            <th>Характеристика</th>
+                            <th>Значення</th>
+                            <th>Модифікатор</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Сила</td>
+                            <td>14</td>
+                            <td>+2</td>
+                        </tr>
+                        <tr>
+                            <td>Спритність</td>
+                            <td>12</td>
+                            <td>+1</td>
+                        </tr>
+                        <tr>
+                            <td>Мудрість</td>
+                            <td>16</td>
+                            <td>+3</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>4. Багаторівневі списки</h3>
+                <p>
+                    Вкладені списки дають змогу створювати ієрархічне
+                    представлення інформації.
+                </p>
+                <pre><code>&lt;ul class="nested-list"&gt;
+    &lt;li&gt;Персонажі
+        &lt;ul&gt;
+            &lt;li&gt;Характеристики&lt;/li&gt;
+            &lt;li&gt;Спорядження&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/li&gt;
+    &lt;li&gt;Бестіарій&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+                <ul class="nested-list">
+                    <li>Персонажі
+                        <ul>
+                            <li>Характеристики</li>
+                            <li>Спорядження</li>
+                        </ul>
+                    </li>
+                    <li>Бестіарій</li>
+                </ul>
+
+                <h3>5. Просунутий CSS</h3>
+                <p>
+                    Псевдоклас <code>:hover</code> застосовує стиль
+                    під час наведення курсора. Властивість
+                    <code>transition</code> робить зміну стилю плавною,
+                    а <code>box-shadow</code> додає тінь.
+                    Flexbox допомагає розташовувати елементи в рядок
+                    або колонку.
+                </p>
+                <pre><code>.feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.feature-item {
+    flex: 1 1 150px;
+    padding: 14px;
+    background-color: #f3ead8;
+    border-radius: 8px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.feature-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 12px #00000020;
+}</code></pre>
+
+                <div class="feature-list">
+                    <div class="feature-item">Листи персонажів</div>
+                    <div class="feature-item">Бестіарій</div>
+                    <div class="feature-item">Бойовий трекер</div>
+                    <div class="feature-item">Калькулятор кубиків</div>
+                </div>
+
+            </section>
+
+            <!-- РЕЗЮМЕ -->
+
+            <section id="lab2-resume" class="report-section">
+                <h2>Стильове оформлення резюме</h2>
+
+                
+
+            </section>
+
+            <!-- ВИСНОВКИ -->
+
+            <section id="lab2-conclusion" class="report-section">
+                <h2>Висновки</h2>
+
+                <p>
+                    У ході виконання лабораторної роботи №2 було
+                    розглянуто принципи використання каскадних таблиць
+                    стилів та застосовано селектори тегів, класів
+                    ідентифікаторів. Також було опрацьовано дочірні,
+                    сусідні, атрибутні й універсальний селектори.
+                </p>
+
+                <p>
+                    На практиці використано CSS-властивості для оформлення
+                    шрифтів, тексту, кольорів, фону, меж, контурів,
+                    відступів, таблиць і вкладених списків. Додатково
+                    застосовано псевдоклас наведення, переходи,
+                    тіні та Flexbox для адаптивного розташування елементів.
+                </p>
+
+                <p>
+                    Отримані навички дають змогу створювати більш
+                    структуровані, читабельні та візуально узгоджені
+                    вебсторінки, а також відокремлювати HTML-структуру
+                    від CSS-оформлення.
+                </p>
+            </section>
+
+        </div>
+    </div>
         </section>
 
 
